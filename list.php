@@ -26,6 +26,7 @@ if($_SESSION['username'] == 'username') {
 	} else {
 		echo "0 results";
 	}
+<<<<<<< HEAD
 	print("<br><br>");
 	print("Insert new");
 	print("<form action=\"save.php\" method=\"post\">");
@@ -51,10 +52,16 @@ if($_SESSION['username'] == 'username') {
 	print("");
 	print("<input type=\"submit\" name=\"submit\" value=\"Save\" >");
 	print("</form>");
+=======
+>>>>>>> parent of daf3e4c... Edited list.php
 
 
 	print("</html>");
 	mysqli_close($conn);
+<<<<<<< HEAD
+=======
+
+>>>>>>> parent of daf3e4c... Edited list.php
 	} else {
 		print("No access.");
 }
