@@ -3,11 +3,8 @@ session_start();
 
 if($_SESSION['username'] == 'username') {
 	include "connect.php";
-
 	print("<html>");
-
 	$conn = connect_db();
-
 	$sql = "SELECT * FROM Addresses";
 	$result = mysqli_query($conn, $sql);
 
@@ -27,12 +24,13 @@ if($_SESSION['username'] == 'username') {
 	} else {
 		echo "0 results";
 	}
+	print("<br><br>");
 
 
 	print("</html>");
 	mysqli_close($conn);
 
-	} else {
-		print("No access.");
+} else {
+	print("No access.");
 }
 ?>
