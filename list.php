@@ -3,11 +3,11 @@ session_start();
 
 if($_SESSION['username'] == 'username') {
 	include "connect.php";
-	
+
 	print("<html>");
-	
+
 	$conn = connect_db();
-	
+
 	$sql = "SELECT * FROM Addresses";
 	$result = mysqli_query($conn, $sql);
 
@@ -21,17 +21,18 @@ if($_SESSION['username'] == 'username') {
 			echo $row["city"] . " ";
 			echo $row["state"] . " ";
 			echo $row["country"] . " ";
+			echo "<a href=\"delete.php?id=" . $row["id"] . "\">DELETE</a>";
 			print("<br>");
 		}
 	} else {
 		echo "0 results";
 	}
-	
-	
+
+
 	print("</html>");
 	mysqli_close($conn);
-	
-} else {
-	print("No access.");
+
+	} else {
+		print("No access.");
 }
 ?>
